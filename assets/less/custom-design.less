@@ -1,0 +1,53 @@
+// DESIGN ELEMENTS
+
+.drop-shadow {
+  text-shadow: 1px 1px 3px #141414;
+}
+
+.color-hovered:hover {
+  color: darken(@white, @darken);
+  cursor: pointer;
+}
+
+.opaque {
+  opacity: 0.8;
+  filter: alpha(opacity=80); /* For IE8 and earlier */
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.text-white {
+  color: @white;
+}
+
+.label-as-badge {
+    border-radius: 1em;
+}
+
+.no-underline, .no-underline:hover {
+  text-decoration: none;
+}
+
+.truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.static {
+  overflow: scroll;
+}
+
+.reset-line-height {
+  line-height: normal;
+}
+
+.smaller-text {
+  font-size: 90%;
+}
+
+.larger-text {
+  font-size: 120%
+}

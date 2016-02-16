@@ -1,0 +1,106 @@
+// CONSTANTS
+
+@alpha:                     85%;
+@darken:                    25%;
+@margin:                    25px;
+@menu-width:                250px;
+@panel-bg:                  #fff;
+@padding:                   5px;
+
+@menu-item-border-radius:   5px;
+
+// COLOR PALETTE
+
+@color-primary:             rgb(57,163,205);
+@color-secondary:           rgb(111,170,1);
+
+@color-1:                   rgb(191,192,194); // lightest
+@color-2:                   rgb(114,114,114); // neutral
+@color-3:                   rgb(54,48,50); // darkest
+
+@white:                     #fff;
+@chart-color:               rgb(105 ,153, 209);
+@gridster-bg:               rgb(230,230,230);
+@active:                    rgb(156, 199, 242);
+
+// IMPORTS
+
+@import "custom-positioning.less";
+@import "custom-design.less";
+@import "custom-panels.less";
+@import "custom-gridster.less";
+@import "custom-widgets.less";
+@import "custom-quote.less";
+@import "custom-signup-wizard.less";
+@import "custom-ribbon.less";
+@import "custom-dashboard.less";
+@import "custom-manage-dashboards.less";
+@import "custom-charts.less";
+@import "custom-twitter.less";
+@import "custom-single-stat.less";
+@import "custom-trophies.less";
+@import "custom-layout-chooser.less";
+@import "custom-count.less";
+
+// MIXINS
+
+// .gradient ( @dir: top, @startColor: #eee, @endColor: white ) {
+//   background-color: @startColor;
+//   background: -webkit-linear-gradient(@dir, @startColor 0%, @endColor 100%);
+//   background: -moz-linear-gradient(@dir, @startColor 0%, @endColor 100%);
+//   background: -ms-linear-gradient(@dir, @startColor 0%, @endColor 100%);
+//   background: -o-linear-gradient(@dir, @startColor 0%, @endColor 100%);
+// }
+
+.rounded (@radius: @padding) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  border-radius: @radius;
+}
+
+.has-padding ( @padding-size: @padding, @multiplier: 1 ){
+  padding: @padding-size*@multiplier;
+}
+
+.border-top-radius(@radius) {
+  border-top-right-radius: @radius;
+   border-top-left-radius: @radius;
+}
+.border-right-radius(@radius) {
+  border-bottom-right-radius: @radius;
+     border-top-right-radius: @radius;
+}
+.border-bottom-radius(@radius) {
+  border-bottom-right-radius: @radius;
+   border-bottom-left-radius: @radius;
+}
+.border-left-radius(@radius) {
+  border-bottom-left-radius: @radius;
+     border-top-left-radius: @radius;
+}
+
+// GENERAL CLASSES (later to be converted to mixins)
+
+.background-white {
+  background-color: @white;
+  background-color: fade(@white, @alpha/1.2);
+}
+
+.text-shadow {
+  text-shadow: 1px 1px 3px #141414;
+}
+
+// HTML, BODY
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  background-color: rgba(51,51,51,1);
+}
+
+.body-background {
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
