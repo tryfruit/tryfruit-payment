@@ -18,18 +18,10 @@
 class GlobalTracker {
     /* -- Class properties -- */
     private static $google;
-    private static $intercomIO;
-    private static $customerIO;
-    private static $mixpanel;
-    private static $kissmetrics;
 
     /* -- Constructor -- */
     public function __construct(){
         self::$google   = new GoogleTracker();
-        self::$intercomIO = new IntercomIOTracker();
-        self::$customerIO = new CustomerIOTracker();
-        self::$mixpanel = new MixpanelTracker();
-        self::$kissmetrics = new KissmetricsTracker();
     }
 
 
@@ -95,30 +87,6 @@ class GlobalTracker {
                     'el' => $eventData['el']
                 );
 
-                /* Intercom IO event data */
-                $intercomIOEventData = array(
-                    'en' => $eventData['en'],
-                    'md' => array('metadata' => $eventData['el'])
-                );
-
-                /* Customer IO event data */
-                $customerIOEventData = array(
-                    'en' => $eventData['en'],
-                    'md' => array('metadata' => $eventData['el'])
-                );
-
-                /* Mixpanel event data */
-                $mixpanelEventData = array(
-                    'en' => $eventData['en'],
-                    'md' => array('metadata' => $eventData['el'])
-                );
-
-                /* Kissmetrics event data */
-                $kissmetricsEventData = array(
-                    'en' => $eventData['en'],
-                    'md' => array('metadata' => $eventData['el'])
-                );
-
             /* Detailed option */
             } else {
                 /* Google Analytics event data */
@@ -128,39 +96,10 @@ class GlobalTracker {
                     'el' => $eventData['el'],
                     'ev' => $eventData['ev'],
                 );
-
-                /* Intercom IO event data */
-                $intercomIOEventData = array(
-                    'en' => $eventData['en'],
-                    'md' => $eventData['md'],
-                );
-
-                /* Customer IO event data */
-                $customerIOEventData = array(
-                    'en' => $eventData['en'],
-                    'md' => $eventData['md'],
-                );
-
-                /* Mixpanel event data */
-                $mixpanelEventData = array(
-                    'en' => $eventData['en'],
-                    'md' => $eventData['md'],
-                );
-
-                /* Kissmetrics event data */
-                $kissmetricsEventData = array(
-                    'en' => $eventData['en'],
-                    'md' => $eventData['md'],
-                );
             }
 
             /* Send events */
             self::$google->sendEvent($googleEventData);
-            self::$intercomIO->sendEvent($intercomIOEventData);
-            self::$customerIO->sendEvent($customerIOEventData);
-            self::$mixpanel->sendEvent($mixpanelEventData);
-            self::$kissmetrics->sendEvent($kissmetricsEventData);
-
         }
     }
 

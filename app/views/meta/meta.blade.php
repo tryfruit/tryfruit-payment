@@ -9,7 +9,7 @@
     <link rel="shortcut icon" href="{{ asset('favicon.ico') }}">
 
     <title>
-      Fruit Dashboard
+      TryFruit Kóder Akadémia
       @if (trim($__env->yieldContent('pageTitle')))
         | @yield('pageTitle')
       @endif
@@ -27,14 +27,11 @@
       <!-- /Fonts -->
 
       <!-- General CSS -->
-      {{ Minify::stylesheet(array(
-            '/css/bootstrap.min.css', 
-            '/css/jquery.gridster.min.css',
-            '/css/jquery.growl.css',
-            '/css/hopscotch.min.css',
-            '/css/custom.css'
-         )) 
-      }}      
+      {{ HTML::style('css/bootstrap.min.css' ) }}
+      {{ HTML::style('css/jquery.gridster.min.css') }}
+      {{ HTML::style('css/jquery.growl.css') }}
+      {{ HTML::style('css/hopscotch.min.css') }}
+      {{ HTML::style('css/custom.css') }}
       <!-- /General CSS -->
 
       <!-- Font Awesome CSS -->
@@ -60,24 +57,19 @@
 
   @section('scripts')
     <!-- General JS -->
-    {{ Minify::javascript(array(
-          '/js/jquery.min.js',
-          '/js/jquery.fittext-CUSTOM.js',
-          '/js/bootstrap.min.js',
-          '/js/jquery.gridster.min.js',
-          '/js/underscore-min.js',
-       )) 
-    }}      
-    {{ Minify::javascript(array(
-          '/js/jquery.ba-resize.min.js',
-          '/js/jquery.growl.js',
-          '/js/moment.min.js',
-          '/js/Chart2.js',
-          '/js/jstz.min.js',
-          '/js/hopscotch.min.js',
-          '/js/bootbox.min.js'
-       )) 
-    }}      
+    {{ HTML::script('js/jquery.min.js') }}
+    {{ HTML::script('js/jquery.fittext-CUSTOM.js') }}
+    {{ HTML::script('js/bootstrap.min.js') }}
+    {{ HTML::script('js/jquery.gridster.min.js') }}
+    {{ HTML::script('js/underscore-min.js') }}
+    {{ HTML::script('js/jquery.ba-resize.min.js') }}
+    {{ HTML::script('js/jquery.growl.js') }}
+    {{ HTML::script('js/moment.min.js') }}
+    {{ HTML::script('js/Chart2.js') }}
+    {{ HTML::script('js/jstz.min.js') }}
+    {{ HTML::script('js/hopscotch.min.js') }}
+    {{ HTML::script('js/bootbox.min.js') }}
+     
     <!-- /General JS -->
 
     <!-- Page specific modals -->
@@ -99,13 +91,7 @@
     @section('pageAlert')
       @include('meta.page-alerts')
     @show
-    <!-- /Page alerts -->
-
-    <!-- TimeZone detection -->
-    @section ('timezoneDetection')
-      @include('meta.timezone-detection')
-    @show
-    <!-- TimeZone detection -->    
+    <!-- /Page alerts --> 
   @show
 
 </html>

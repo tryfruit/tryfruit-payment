@@ -11,8 +11,6 @@ class Subscription extends Eloquent
 
     protected $fillable = array(
         'status',
-        'trial_status',
-        'trial_start',
     );
 
     /* -- Relations -- */

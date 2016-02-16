@@ -17,6 +17,11 @@
 
     "autoload": {
         "classmap": [
+            "app/libraries",
+            "app/controllers",
+            "app/models",
+            "app/database",
+            "app/exceptions"
         ]
     },
     "autoload-dev": {

@@ -6,7 +6,7 @@
 
 @section('pageContent')
 
-<body style="background: url({{ Background::getBaseUrl() }}) no-repeat center center fixed">
+<body>
 
 <div class="vertical-center">
   <div class="container">
