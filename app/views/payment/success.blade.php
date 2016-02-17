@@ -46,8 +46,8 @@
         </div> <!-- /.row -->
         <hr />
         <div class="row">
-          <div class="col-md-8 col-md-offset-2 well">
-            <p>
+          <div class="col-md-8 col-md-offset-2 well text-center">
+            <p class="lead">
               Amint a befizetésed megérkezik hozzánk (de legkésőbb 24 órán belül) emailben felvesszük veled a kapcsolatot.
             </p>
             <p>
