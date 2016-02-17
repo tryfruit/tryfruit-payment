@@ -48,7 +48,7 @@
 
       <footer class="footer">
         <div class="container">
-          <p class="text-muted">2016. tryFruit &copy; Észrevételeket, javaslatokat szívesen fogadunk a <a href="mailto:hello@tryfruit.com?Subject=Beiratkoz&#225;s" target="_top">hello@tryfruit.com címen.</a></p>
+          <p class="text-muted">2016. tryFruit &copy; Észrevételeket, javaslatokat szívesen fogadunk a <a href="mailto:hello@tryfruit.com?Subject=Beiratkoz&#225;s" target="_top">hello@tryfruit.com</a> címen.</p>
         </div>
       </footer>
   @stop
