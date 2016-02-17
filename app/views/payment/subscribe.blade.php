@@ -30,80 +30,87 @@
 
   <div class="container">
     <div class="row">
+      
+      <div class="col-md-12 text-center">
+        <h1>Beiratkozás után azonnal kezdheted a tanulást</h1>  
+      </div> <!-- /.col-md-12 -->
+      
+      <div class="row">
+        <div class="col-sm-12 col-md-6 col-md-offset-3">
 
-      <form id="checkout" action="{{ route('payment.subscribe') }}" method="post">
-
-      <div class="panel panel-success no-bottom-margin">
-        <div class="panel-heading text-center">
-          <i class="fa fa-shield"></i> A tranzakciót 128 bites SSL kapcsolat védi. Biztonságban vagy.
-        </div>
-          <div class="panel-body">
-            <div class="row">
-              <div class="col-md-12 text-center">
-                <h1>Beiratkozás után azonnal kezdheted a tanulást</h1>
-                <small class="text-muted">MasterCard, Visa és American Express kártyákat is elfogadunk.</small>    
-              </div> <!-- /.col-md-12 -->
-            </div> <!-- /.row -->
-            <div class="row">
-              <div class="col-md-6">
-
-                  <div class="row">
-                    <div class="col-sm-12 col-md-10 col-md-offset-2 form-group">
-                      <label for="cardNumber" class="control-label">A bankkártyád száma</label>
-                      <div class="controls">
-                        <div class="input-group">
-                          <input type="text" class="form-control" placeholder="1234123412341234" data-braintree-name="number">
-                          <span class="input-group-addon"><i class="fa fa-shield"></i></span>
-                        </div>
-                      </div>
-                    </div> <!-- /.form-group -->  
-                  </div> <!-- /.row -->
-
-                  <div class="row">
-                    <div class="col-sm-4 col-md-4 col-md-offset-2 form-group">
-                      <label for="expirationDate" class="control-label">Lejárati dátum (HH/ÉÉ)</label>
-                      <input type="text" class="form-control" placeholder="03/18" data-braintree-name="expiration_date">
-                    </div>
-
-                    <div class="col-sm-4 col-md-4 col-sm-offset-2 form-group">
-                      <label for="cvvCode" class="control-label">CVV kód</label>
-                      <input type="text" class="form-control" placeholder="123" data-braintree-name="cvv">
-                    </div>
-                  </div> <!-- /.row -->
-
-                  <div class="row">
-                    <div class="col-sm-12 col-md-10 col-md-offset-2 form-group">
-                      <label for="name" class="control-label">Kártyabirtokos neve</label>
-                      <input type="text" class="form-control" placeholder="Vezetéknév Keresztnév" data-braintree-name="cardholder_name">
-                    </div> <!-- /.col-sm-10 -->
-                  </div> <!-- /.row -->
-
-                  <div class="row">
-                    <div class="col-sm-12 col-md-10 col-md-offset-2 form-group">
-                      <label for="email" class="control-label">E-mail</label>
-                      <input type="text" name="email" class="form-control" placeholder="email@cimem.hu">
-                    </div> <!-- /.col-sm-10 -->
-                  </div> <!-- /.row -->
-
-              </div> <!-- /.col-md-6 -->
-              <div class="col-md-3 col-md-offset-2 well">
-                <p class="lead">A havi előfizetés ára:</p>
-                <h2 class="text-center">2500 Ft</h2>
-                <p class="text-muted">Ha nem vagy elégedett, azonnal viszszatérítjük a pénzed.</p>
-              </div> <!-- /.col-md-3 -->
-            </div> <!-- /.row -->
+          <div class="panel panel-success no-bottom-margin">
             
-          </div>
-        </div> <!-- /.panel -->
-        <div class="row">
-          <div class="col-md-12 text-center">
-            <div class="arrow-down"></div>
-            <button type="submit" class="btn btn-success btn-lg">Beiratkozom</button>
-          </div> <!-- /.col-md-12 -->
-        </div> <!-- /.row -->
+            <div class="panel-heading text-center">
+              <i class="fa fa-shield"></i> Bankkártyás fizetés
+            </div>
+
+            <div class="panel-body">
+          
+              <form id="checkout" action="{{ route('payment.subscribe') }}" method="post">
+
+                <div class="row">
+                  <div class="col-sm-12 form-group">
+                    <label for="cardNumber" class="control-label">A bankkártyád száma</label>
+                    <div class="controls">
+                      <div class="input-group">
+                        <input type="text" class="form-control" placeholder="1234123412341234" data-braintree-name="number">
+                        <span class="input-group-addon"><i class="fa fa-shield"></i></span>
+                      </div>
+                    </div>
+                  </div> <!-- /.form-group -->  
+                </div> <!-- /.row -->
+
+                <div class="row">
+                  <div class="col-sm-4 form-group">
+                    <label for="expirationDate" class="control-label">Lejárati dátum (HH/ÉÉ)</label>
+                    <input type="text" class="form-control" placeholder="03/18" data-braintree-name="expiration_date">
+                  </div>
+
+                  <div class="col-sm-4 col-sm-offset-4 form-group">
+                    <label for="cvvCode" class="control-label">CVV kód</label>
+                    <input type="text" class="form-control" placeholder="123" data-braintree-name="cvv">
+                  </div>
+                </div> <!-- /.row -->
+
+                <div class="row">
+                  <div class="col-sm-12 col-md-12 form-group">
+                    <label for="name" class="control-label">Kártyabirtokos neve</label>
+                    <input type="text" class="form-control" placeholder="Vezetéknév Keresztnév" data-braintree-name="cardholder_name">
+                  </div> <!-- /.col-sm-10 -->
+                </div> <!-- /.row -->
+
+                <div class="row">
+                  <div class="col-sm-12 col-md-12 form-group">
+                    <label for="email" class="control-label">E-mail</label>
+                    <input type="text" name="email" class="form-control" placeholder="email@cimem.hu">
+                  </div> <!-- /.col-sm-10 -->
+                </div> <!-- /.row -->
+
+                <div class="row">
+                  <div class="col-sm-12 form-group">
+                    <label for="price" class="control-label">A havi előfizetés ára</label>
+                    <div class="col-sm-12">
+                      <p class="form-control-static"><strong>2500 Ft</strong> (minden hónapban automatikusan megterheljük a kártyádat)</p>
+                    </div>
+                  </div> <!-- /.col-sm-10 -->
+                </div> <!-- /.row -->
+
+              </form>
+
+            </div> <!-- /.panel-body -->
+          </div> <!-- /.panel -->
+
+        </div> <!-- /.col-md-6 -->
       </div> <!-- /.row -->
 
-    </form>
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <div class="arrow-down"></div>
+          <button type="submit" class="btn btn-success btn-lg">Fizetek</button>
+        </div> <!-- /.col-md-12 -->
+      </div> <!-- /.row -->
+      
+    
 
     <div class="row text-center">
       <hr />
@@ -119,7 +126,7 @@
       </div> <!-- /.col-md-4 -->
       <div class="col-md-4">
         <p class="text-info">
-          <i class="fa fa-3x fa-credit-card"></i>
+          <i class="fa fa-3x fa-money"></i>
         </p>
         <h3>Garancia</h3>
         <p class="lead">
@@ -138,10 +145,40 @@
           a tanárainkkal.
         </p>
       </div> <!-- /.col-md-4 -->
-      <hr />
     </div> <!-- /.row -->
 
-    
+    <div class="row text-center">
+      <div class="col-md-4">
+        <p class="text-info">
+          <i class="fa fa-3x fa-cc-mastercard"></i>
+        </p>
+        <h3>Univerzális</h3>
+        <p class="lead">
+          MasterCard, Visa és American Express kártyákat is elfogadunk.
+        </p>
+      </div> <!-- /.col-md-4 -->
+      <div class="col-md-4">
+        <p class="text-info">
+          <i class="fa fa-3x fa-paypal"></i>
+        </p>
+        <h3>Megbízhatóság</h3>
+        <p class="lead">
+          A fizetés a Braintree segítségével történik,
+          amelyet a PayPal szakemberei fejlesztettek.
+        </p>
+      </div> <!-- /.col-md-4 -->
+      <div class="col-md-4">
+        <p class="text-info">
+          <i class="fa fa-3x fa-shield"></i>
+        </p>
+        <h3>Adatvédelem</h3>
+        <p class="lead">
+          A fizetési adatok nem érkeznek meg hozzánk,
+          azokat egyből továbbítjuk a fizetési szolgáltatónak.
+        </p>
+      </div> <!-- /.col-md-4 -->
+    </div> <!-- /.row -->
+  </div> <!-- /.row -->
 
   </div> <!-- /.container -->
 
