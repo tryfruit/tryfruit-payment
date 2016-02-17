@@ -162,7 +162,6 @@ class Subscription extends Eloquent
                 $result['errors'] |= true;
                 $result['messages'] .= $error->code . ": " . $error->message . ' ';
             }
-            Log::error($subscriptionResult->transaction->status);
         }
 
         /* Return result */
