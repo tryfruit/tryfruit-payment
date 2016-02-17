@@ -10,7 +10,6 @@
   @show  
 
   @section('footer')
-  @include('meta.footer')
   @show
  
 </body>

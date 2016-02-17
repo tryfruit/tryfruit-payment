@@ -1,7 +1,7 @@
-@extends('meta.base-user')
+@extends('meta.base')
 
   @section('pageTitle')
-    Subscribe
+    Fizetés
   @stop
 
   @section('pageStylesheet')
@@ -13,17 +13,19 @@
 
         <div class="row">
           <div class="col-md-6 col-md-offset-3">
-            <div id="subscription-panel" class="panel panel-default panel-transparent not-visible">
+            <div id="subscription-panel" class="panel panel-default panel-transparent">
               <div  class="panel-body text-center">
-                {{ Form::open(array('route' => array('payment.subscribe', $plan->id))) }}
-                  <div id="payment-form"></div>
+                <form id="checkout" action="{{ route('payment.subscribe') }}" method="post">
+                  Number <input class="form-control" data-braintree-name="number" value="4111111111111111">
+                  cvv <input class="form-control" data-braintree-name="cvv" value="100">
 
-                <div class="form-actions text-center">
-                  <p>Subscribe to {{ $plan->name }} plan for <i class="fa fa-{{ $plan->braintree_merchant_currency }}"></i>{{ $plan->amount }}</p>
-                  {{ Form::submit('Subscribe', array('class' => 'btn btn-success')) }}
-                </div> <!-- / .form-actions -->
-                
-                {{ Form::close() }}
+                  expiration date <input class="form-control" data-braintree-name="expiration_date" value="10/20">
+
+                  cardholder name <input class="form-control" data-braintree-name="cardholder_name" value="John Smith">
+
+                  email address <input name="email" class="form-control" value="hello@tryfruit.com">
+
+                  <input type="submit" id="submit" value="Fizetés">
                 </form>
               </div> <!-- /.panel-footer -->
               <div class="panel-footer text-center">
@@ -46,13 +48,7 @@
         var clientToken = "{{ Braintree_ClientToken::generate() }}";
 
         // Initialize payment form
-        braintree.setup(clientToken, "dropin", {
-          container: "payment-form"
-        });
-
-        $(document).ready(function(){
-          $('#subscription-panel').fadeIn();
-        });
+        braintree.setup(clientToken, "custom", {id: "checkout"});
     </script>
   @stop
 

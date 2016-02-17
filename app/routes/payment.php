@@ -5,38 +5,22 @@
  * @see PaymentController
  */
 Route::group([
-        'prefix'    => 'payment',
+        'prefix'    => '',
     ], function() {
 
-    Route::get('plans', [
-        'before'    => 'auth',
-        'as'        => 'payment.plans',
-        'uses'      => 'PaymentController@getPlans'
-    ]);
-
-    Route::get('subscribe/{planID}', [
-        'before'    => 'auth',
+    Route::get('subscribe', [
         'as'        => 'payment.subscribe',
         'uses'      => 'PaymentController@getSubscribe'
     ]);
 
-    Route::post('subscribe/{planID}', [
-        'before'    => 'auth',
+    Route::post('subscribe', [
         'as'        => 'payment.subscribe',
         'uses'      => 'PaymentController@postSubscribe'
     ]);
 
-    Route::get('unsubscribe', [
-        'before'    => 'auth',
-        'as'        => 'payment.unsubscribe',
-        'uses'      => 'PaymentController@getUnsubscribe'
+    Route::get('success', [
+        'as'        => 'payment.success',
+        'uses'      => 'PaymentController@getSuccess'
     ]);
-
-    Route::post('unsubscribe', [
-        'before'    => 'auth',
-        'as'        => 'payment.sunubscribe',
-        'uses'      => 'PaymentController@postUnsubscribe'
-    ]);
-
 });
 

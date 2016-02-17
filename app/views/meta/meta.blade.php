@@ -15,12 +15,6 @@
       @endif
     </title>
 
-    @section('tracking')
-      @if(GlobalTracker::isTrackingEnabled())
-        @include('tracking.global-event-tracker')
-      @endif
-    @show
-
     @section('stylesheet')
       <!-- Fonts -->
       <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,400italic,700,800' rel='stylesheet' type='text/css'>
@@ -28,9 +22,7 @@
 
       <!-- General CSS -->
       {{ HTML::style('css/bootstrap.min.css' ) }}
-      {{ HTML::style('css/jquery.gridster.min.css') }}
       {{ HTML::style('css/jquery.growl.css') }}
-      {{ HTML::style('css/hopscotch.min.css') }}
       {{ HTML::style('css/custom.css') }}
       <!-- /General CSS -->
 
@@ -58,17 +50,8 @@
   @section('scripts')
     <!-- General JS -->
     {{ HTML::script('js/jquery.min.js') }}
-    {{ HTML::script('js/jquery.fittext-CUSTOM.js') }}
     {{ HTML::script('js/bootstrap.min.js') }}
-    {{ HTML::script('js/jquery.gridster.min.js') }}
-    {{ HTML::script('js/underscore-min.js') }}
-    {{ HTML::script('js/jquery.ba-resize.min.js') }}
     {{ HTML::script('js/jquery.growl.js') }}
-    {{ HTML::script('js/moment.min.js') }}
-    {{ HTML::script('js/Chart2.js') }}
-    {{ HTML::script('js/jstz.min.js') }}
-    {{ HTML::script('js/hopscotch.min.js') }}
-    {{ HTML::script('js/bootbox.min.js') }}
      
     <!-- /General JS -->
 

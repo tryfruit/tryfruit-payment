@@ -21,12 +21,6 @@ App::before(function($request) {
 
 /* This filter runs after a request is served */
 App::after(function($request, $response) {
-    /* Update last activity for the User */
-    if (Auth::check()) {
-        $settings = Auth::user()->settings;
-        $settings->last_activity = Carbon::now();
-        $settings->save();
-    }
 });
 
 /*
