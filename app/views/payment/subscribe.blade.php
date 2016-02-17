@@ -18,7 +18,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="/">tryFruit IT akadémia</a>
+        <a class="navbar-brand" href="https://itacademy.tryfruit.com">tryFruit IT akadémia</a>
       </div>
       <div id="navbar" class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
@@ -52,7 +52,7 @@
                       <label for="cardNumber" class="control-label">A bankkártyád száma</label>
                       <div class="controls">
                         <div class="input-group">
-                          <input type="text" class="form-control" placeholder="0000 0000 0000 0000" data-braintree-name="number">
+                          <input type="text" class="form-control" placeholder="1234123412341234" data-braintree-name="number">
                           <span class="input-group-addon"><i class="fa fa-shield"></i></span>
                         </div>
                       </div>
@@ -61,7 +61,7 @@
 
                   <div class="row">
                     <div class="col-sm-4 col-md-4 col-md-offset-2 form-group">
-                      <label for="expirationDate" class="control-label">Lejárati dátum</label>
+                      <label for="expirationDate" class="control-label">Lejárati dátum (HH/ÉÉ)</label>
                       <input type="text" class="form-control" placeholder="03/18" data-braintree-name="expiration_date">
                     </div>
 
