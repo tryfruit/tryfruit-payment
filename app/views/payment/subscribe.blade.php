@@ -95,8 +95,6 @@
                   </div> <!-- /.col-sm-10 -->
                 </div> <!-- /.row -->
 
-              </form>
-
             </div> <!-- /.panel-body -->
           </div> <!-- /.panel -->
 
@@ -110,7 +108,7 @@
         </div> <!-- /.col-md-12 -->
       </div> <!-- /.row -->
       
-    
+    </form>
 
     <div class="row text-center">
       <hr />
