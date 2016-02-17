@@ -31,19 +31,30 @@
         <div class="row">
           <div class="col-md-12">
             <h1>Üdv a fedélzeten!</h1>
-            <p class="lead">
-              Köszönjük, a bankkártyás fizetés sikeres volt.
-            </p>
-            <img src="/img/fruit_line.png" />
+            <div class="alert alert-success" role="alert">
+              <p class="lead">
+                Köszönjük, a bankkártyás fizetés sikeres volt.
+              </p>              
+            </div>
+          </div> <!-- /.col-md-12 -->
+        </div> <!-- /.row -->
+        <hr />
+        <div class="row">
+          <div class="col-md-12">
+            <img src="/img/fruit_line.png" class="img-responsive center-block"/>
+          </div> <!-- /.col-md-12 -->
+        </div> <!-- /.row -->
+        <hr />
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2 well">
             <p>
               Amint a befizetésed megérkezik hozzánk (de legkésőbb 24 órán belül) emailben felvesszük veled a kapcsolatot.
             </p>
             <p>
               Ha addig is bármilyen észrevételed, javaslatod van, szívesen fogadjuk a <a href="mailto:hello@tryfruit.com" target="_top">hello@tryfruit.com</a> címen.
             </p>
-          </div> <!-- /.col-md-12 -->
+          </div> <!-- /.col-md-8 -->
         </div> <!-- /.row -->
-
       </div> <!-- /.container -->
 
       <footer class="footer">
