@@ -42,7 +42,8 @@ class PaymentController extends BaseController
     public function postSubscribe() {
         /* Get the extra user input from the form */
         $userInput = array(
-            'email' => Input::get('email'),
+            'email'                => Input::get('email'),
+            'full_billing_address' => Input::get('full_billing_address'),
             'message' => '',
         );
 
