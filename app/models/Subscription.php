@@ -104,8 +104,11 @@ class Subscription extends Eloquent
         } catch (Braintree_Exception_NotFound $e) {
             /* Create new customer */
             $customerResult = Braintree_Customer::create([
-                'email' => $userInput['email'],
                 'paymentMethodNonce' => $paymentMethodNonce,
+                'email'              => $userInput['email'],
+                'customFields'       => [
+                    'full_billing_address' => $userInput['full_billing_address'],
+                ],
             ]);
 
             /* Success */

@@ -87,10 +87,18 @@
                 </div> <!-- /.row -->
 
                 <div class="row">
+                  <div class="col-sm-12 col-md-12 form-group">
+                    <label for="full_billing_address" class="control-label">Számlázási cím</label>
+                    <input type="text" name="full_billing_address" class="form-control" placeholder="1111 Budapest, Petőfi Sándor utca 12.">
+                  </div> <!-- /.col-sm-10 -->
+                </div> <!-- /.row -->
+
+                <div class="row">
                   <div class="col-sm-12 form-group">
                     <label for="price" class="control-label">A havi előfizetés ára</label>
                     <div class="col-sm-12">
-                      <p class="form-control-static"><strong>2500 Ft</strong> (minden hónapban automatikusan megterheljük a kártyádat)</p>
+                      <p class="form-control-static"><strong>2500 Ft</strong> </p>
+                      <p> Az előfizetés minden hónap azonos napján automatikusan megújul, az összeg havonta levonásra kerül. Az előfizetés a hónap bármely napján azonnal lemondható emailben. A 60 napos pénzvisszafizetési garancia természetesen ekkor is él.</p>
                     </div>
                   </div> <!-- /.col-sm-10 -->
                 </div> <!-- /.row -->
